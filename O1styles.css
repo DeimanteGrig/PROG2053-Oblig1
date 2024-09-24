@@ -1,7 +1,134 @@
 @font-face {
     font-family: "Roboto";
-    src: url(/Fonts/Roboto-Black.ttf); /* remeber to add fallback if something goes wrong */
+    src: url(/Fonts/Roboto-Light.ttf); 
+    font-weight: 300;
 }
+
+@font-face {
+    font-family: "Roboto";
+    src: url(/Fonts/Roboto-Bold.ttf); 
+    font-weight: 700;
+}
+
 /* format('truetype')?*/
 
 
+body {
+    font-family: Roboto, Arial, sans-serif;
+}
+
+header {
+    background-color: #1b2431;
+    color: white;
+    padding: 2rem 2rem;
+    border-bottom: 1px solid rgb(48, 52, 71);
+}
+
+.HeaderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Logo {
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+nav {
+    word-spacing: 10px;
+}
+
+a {
+    color: white;
+    font-size: small;
+    word-spacing: 1px;
+    text-decoration: none;
+}
+
+.Hero {
+    background-color: #1b2431;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.HeroText {
+    color: white;
+    margin-right: 60px;
+    width: 300px;
+}
+
+.HeroImage {
+    padding: 70px;
+    background-color: rgb(102, 103, 116);
+}
+
+.Placeholder {
+    color: white;
+}
+
+button {
+    border-radius: 7px;
+    padding: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: white;
+}
+
+#HeroButton {
+    background-color: rgb(49, 101, 231);
+    border: none;
+}
+
+.Quote {
+    background-color: rgb(229, 228, 230);
+    padding: 70px;
+}
+
+#ThorQuote {
+    font-size:larger;
+}
+
+
+#CallButton {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+#CallButton:hover {
+    background-color: rgb(113, 146, 245);
+    color: lightgray
+}
+
+.CallToAction {
+    background-color: lightgray;
+    border-radius: 7px;
+    padding: 15px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    min-width: 200px;
+    max-width: 800px;
+    background-color: rgb(49, 101, 231);
+}
+
+.CallText {
+    margin-right: 70px;
+    color: white;
+    line-height: 5px;
+}
+
+footer {
+    background-color: #1b2431;
+    display: flex;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
