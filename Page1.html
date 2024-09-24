@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Oblig 1 website</title>
+        <title>Page 1</title>
         <link rel="stylesheet" href="O1styles.css">
     </head>
     <body>
@@ -24,28 +24,43 @@
                         sentences should be here.</p>
                 <button>Sign up</button>
             </div>
-            <div>
-                <!--Image here-->
+            <div class="HeroImage">
+                <div class="Placeholder">This is a placeholder for an image</div>
             </div>
         </section>
 
         <!--Information-->
-        <section>
+        <section class="Info">
             <h2>Some random information</h2>
-            <!--Implement images with wrapped text,
-                maybe using 2 separate divs?-->
+            <div class="InfoContain">
+                <div class="InfoPart">
+                    <div class="Image-Placeholder"></div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing 
+                        elit, sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua.</p>
+                </div>
+                <div class="InfoPart">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing 
+                        elit, sed do eiusmod tempor incididunt ut labore et 
+                        dolore magna aliqua.</p>
+                    <div class="Image-Placeholder"></div>
+                </div>
+            </div>
+            <!-- Use border-radius for round corners-->
         </section>
 
         <!--Quote-->
-        <section>
-            <p>This is a very inspiring quote by Thor, because he's a wise 
-                character with multiple good lines</p>
-            <cite>- Thor</cite>
+        <section class="quote">
+            <blockquote>
+                This is a very inspiring quote by Thor, because he's a wise 
+                character with multiple good lines
+                <cite>- Thor</cite>
+            </blockquote>
         </section>
 
         <!--CallToAction-->
-        <section>
-            <div>
+        <section class="CallToAction">
+            <div class="CallText">
                 <h2>Call to action! It's time!</h2>
                 <p>More very important text, because this is a good cause</p>
             </div>
@@ -53,10 +68,7 @@
         </section>
 
         <footer>
-            <p>Copyright ©</p>
+            <p> Copyright &copy;</p>
         </footer>
     </body>
-    <footer>
-
-    </footer>
 </html>
