@@ -10,7 +10,9 @@
     font-weight: 700;
 }
 
-/* format('truetype')?*/
+* {
+    margin: 0px;
+}
 
 
 body {
@@ -48,7 +50,7 @@ a {
 
 .Hero {
     background-color: #1b2431;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem 3rem 2rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -61,8 +63,12 @@ a {
     width: 300px;
 }
 
+#HeroHeader {
+    margin: 20px 0px;
+}
+
 .HeroImage {
-    padding: 70px;
+    padding: 8vw;
     background-color: rgb(102, 103, 116);
 }
 
@@ -75,6 +81,7 @@ button {
     padding: 5px;
     padding-right: 20px;
     padding-left: 20px;
+    margin: 20px 0px;
     color: white;
 }
 
@@ -83,30 +90,76 @@ button {
     border: none;
 }
 
+.Info {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Info-Header {
+    text-align: center;
+    margin: 25px 0px;
+}
+
+.InfoContain {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 50px;
+}
+
+.InfoPart {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.Image-Placeholder1, .Image-Placeholder2 {
+    width: 1000px;
+    height: 120px;
+    background-color: white;
+    border: 4px solid rgb(49, 101, 231);
+    border-radius: 6px;
+}
+
+.Image-Placeholder1 {
+    margin: 0px 20px 20px 0px;
+}
+
+.Image-Placeholder2 {
+    margin: 0px 0px 0px 20px;
+}
+
+
 .Quote {
     background-color: rgb(229, 228, 230);
     padding: 70px;
+    align-items: center;
 }
 
 #ThorQuote {
+    font-style: italic;
     font-size:larger;
+    text-shadow: 1px 2px 2px gray;
+    text-align: left;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-#CallButton {
-    background-color: transparent;
-    border: 1px solid white;
+cite {
+    text-shadow: none;
+    float: right;
+    font-style: normal;
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-#CallButton:hover {
-    background-color: rgb(113, 146, 245);
-    color: lightgray
-}
 
 .CallToAction {
     background-color: lightgray;
     border-radius: 7px;
-    padding: 15px;
+    padding: 5px 40px;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -115,14 +168,27 @@ button {
     justify-content: center;
     align-items: center; 
     min-width: 200px;
-    max-width: 800px;
+    max-width: 500px;
     background-color: rgb(49, 101, 231);
 }
+
 
 .CallText {
     margin-right: 70px;
     color: white;
-    line-height: 5px;
+    line-height: 15px;
+    font-size: smaller;
+}
+
+#CallButton {
+    background-color: transparent;
+    border: 1px solid white;
+    width: 100px;
+}
+
+#CallButton:hover {
+    background-color: rgb(113, 146, 245);
+    color: lightgray
 }
 
 footer {
@@ -131,4 +197,5 @@ footer {
     color: white;
     display: flex;
     justify-content: center;
+    padding: 20px 0px;
 }
