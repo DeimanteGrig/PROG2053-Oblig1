@@ -21,6 +21,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 
 header {
@@ -205,18 +206,37 @@ footer {
 }
 
 
-#content {
+#p2content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
-    max-width: 1200px;  /* Constrain the width */
+    max-width: 1200px; 
     margin: 20px auto;
     flex: 1; 
 }
-
 
 article {
     padding: 20px;
     border: 1px solid black; 
 }
+
+#p3content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 20px;
+    width: 100%;
+    max-width: 800px; 
+    margin: 80px auto 250px auto;
+    flex: 1;
+}
+
+.weatherBox {
+    padding: 20px;
+    border: 1px solid #bfbbc1;
+    background-color: rgb(228, 228, 243); 
+    border-radius: 5px;
+}
+
+
+
