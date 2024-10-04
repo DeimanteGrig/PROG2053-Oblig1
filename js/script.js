@@ -61,13 +61,13 @@ function loadPosts(posts, i) {
     return i; 
 }
 
+// Function to check if user has scrolled down
 function scrolledDown() {
-    // return window.innerHeight + window.scrollY >= document.body.scrollHeight;
-
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
     return (scrollTop + clientHeight >= scrollHeight -5);
 }
 
+// loads posts until page is filled
 function loadUntilScrollable(posts, i) {
     while (i < 100 && document.body.scrollHeight <= window.innerHeight) {
         i = loadPosts(posts, i); 
@@ -75,6 +75,7 @@ function loadUntilScrollable(posts, i) {
     return i; 
 }
 
+// function to load weather data in page 3
 function loadWeather() {
     const locations = [
         {name: "New York", latitude: 40.7143, longitude: -74.0060},
@@ -87,7 +88,7 @@ function loadWeather() {
 
     const content = document.getElementById("p3content");
     content.innerHTML = '';
-
+                            // Gets info from every location, puts into html
     locations.forEach(location => {
         fetch(`https://api.open-meteo.com/v1/forecast?latitude=${location.latitude}&longitude=${location.longitude}&current_weather=true`)
         .then(response => {
