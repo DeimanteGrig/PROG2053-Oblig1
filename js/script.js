@@ -62,7 +62,10 @@ function loadPosts(posts, i) {
 }
 
 function scrolledDown() {
-    return window.innerHeight + window.scrollY >= document.body.scrollHeight;
+    // return window.innerHeight + window.scrollY >= document.body.scrollHeight;
+
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+    return (scrollTop + clientHeight >= scrollHeight -5);
 }
 
 function loadUntilScrollable(posts, i) {
