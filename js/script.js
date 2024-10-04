@@ -1,42 +1,46 @@
+// loads page 2 dynamic content when page is loaded
 document.addEventListener('DOMContentLoaded', () =>{
     if (window.location.pathname.includes("Page2.html")){
         loadPage2();
     }
 });
 
+// loads page 3 weather when page is loaded, every 5 mins.
 document.addEventListener('DOMContentLoaded', () =>{
     if (window.location.pathname.includes("Page3.html")){
         setInterval(loadWeather(), 300000);
     }
 });
 
+// function to load page 2
 function loadPage2() {
     fetch("https://jsonplaceholder.typicode.com/posts")
     .then(response => {
-        if (!response.ok) {
+        if (!response.ok) {     // error response
             throw new Error("Error with the status: " + response.status);
         }
         return response.json();
     })
     .then((posts) => {
-        let i = 0;
+        let i = 0;              // index of posts
 
-        i = loadUntilScrollable(posts, i);
+        i = loadUntilScrollable(posts, i);  // loads until page is filles
 
-        window.addEventListener('scroll', () => {
-            if (scrolledDown() && i < 100) {
-                i = loadPosts(posts, i);
+        window.addEventListener('scroll', () => {   // when scrolled, 
+            if (scrolledDown() && i < 100) {        // if more data available,
+                i = loadPosts(posts, i);            // load more posts
             }
         })
     })
 }
 
+// function to load 3 (or less) posts
 function loadPosts(posts, i) {
     let container = document.getElementById("p2content");
+                                                // checks if you can load 3
+    let end = Math.min(i+3, 100);               // if not, load up to 100
 
-    let end = Math.min(i+3, 100);
-
-    for (let j = i; j < end; j++) {
+    for (let j = i; j < end; j++) {             
         const article = document.createElement("article");
         const userId = document.createElement("h3");
         userId.textContent = "ID: " + posts[j].userId;
